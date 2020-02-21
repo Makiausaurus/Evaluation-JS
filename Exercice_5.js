@@ -1,11 +1,11 @@
 var i;
-var x;
 var resultat;
 
-function TableDeMultiplication(x) {
+function TableDeMultiplication() {
+    var x = parseInt(prompt("Entrez un nombre pour connaître sa table de multiplication :"));
     for (i = 1; i <= 10; i++) {
         resultat = x * i;
-        console.log(x + "*" + i + " = " + resultat);
+        alert(x + "*" + i + " = " + resultat);
     }
 }
 

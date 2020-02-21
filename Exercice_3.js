@@ -25,9 +25,9 @@ function moyMinMax1() {
     } // fin while
 
     // sortie de boucle puis calcul
-    moyenne = total / (compteur - 1);
-    console.log(total, (compteur - 1));
-    alert("Moyenne : " + total + "/" + (compteur - 1) + " =~ " + moyenne.toFixed(2) +
+    moyenne = total / (compteur);
+    console.log(total, (compteur));
+    alert("Moyenne : " + total + "/" + (compteur) + " =~ " + moyenne.toFixed(2) +
         "\nLa valeur minimale entrée était : " + valMin + " et la valeur maximale" +
         " était : " + valMax);
 }

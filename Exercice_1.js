@@ -14,6 +14,18 @@ function calculPrix() {
     TOT *= QTECOM;
     console.log(TOT)
 
+    if (TOT >= 100 && TOT <= 200) { // si total entre 100 et 199 -> 5%
+        REM = 5 / 100;
+        console.log(REM);
+    } else if (TOT > 200) { //sinon si 200 ou plus -> 10%
+        REM = 10 / 100
+        console.log(REM);
+    } else { //sinon vide
+        REM = "";
+    }
+
+    TOT = TOT - (TOT * REM);
+    console.log(TOT);
     if (TOT > 500) { //détermination des frais de port en fonction du total
         PORT = 0; // Si > 500€, pas de frais de port
         console.log(PORT)
@@ -26,17 +38,7 @@ function calculPrix() {
         }
     }
 
-    if (TOT >= 100 && TOT < 200) { // si total entre 100 et 199 -> 5%
-        REM = 5 / 100;
-        console.log(REM);
-    } else if (TOT >= 200) { //sinon si 200 ou plus -> 10%
-        REM = 10 / 100
-        console.log(REM);
-    } else { //sinon vide
-        REM = "";
-    }
-
-    PAP = TOT - (TOT * REM); // calcul de la remise puis ajout des frais de port
+    PAP = TOT
     PAP += PORT;
 
     if (REM == 0.05) { //passage de la remise pour des valeurs propres à l'affichage

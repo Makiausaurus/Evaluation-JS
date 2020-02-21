@@ -1,8 +1,8 @@
-var n = parseInt(prompt("Entrez un nombre pour connaître la somme de ses entiers inférieurs."));;
 var i = 0;
 var som = 0;
 
-function calculSomEntInf(n) {
+function calculSomEntInf() {
+    let n = parseInt(prompt("Entrez un nombre pour connaître la somme de ses entiers inférieurs."));
     for (i = 1; i < n; i++) {
         som += i;
         console.log(som);
