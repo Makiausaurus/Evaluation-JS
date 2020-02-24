@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="style_2.css">
     <title>Jarditou - Contactez-nous !</title>
 </head>
@@ -64,12 +63,14 @@
                     <label for="nom">Votre nom <span class="font-weight-bold text-danger">*</span> : </label>
                     <input class="form-control" type="text" name="nom" id="nom" placeholder="Doe">
                     <span id="errorNom"></span>
+                    <span name="error" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="prenom">Votre prénom <span class="font-weight-bold text-danger">*</span> : </label>
                     <input class="form-control" type="text" name="prenom" id="prenom" placeholder="John">
                     <span id="errorPrenom"></span>
+                    <span name="error" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
@@ -93,12 +94,14 @@
                     <input class="form-control" type="date" name="birthDate" id="birthDate" maxlength="10"
                         placeholder="jj/mm/aaaa">
                     <span id="errorBirthDate"></span>
+                    <span name="error" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="codePostal">Code Postal <span class="font-weight-bold text-danger">*</span> : </label>
                     <input class="form-control" type="text" name="codePostal" id="codePostal" placeholder="Ex : 75000">
                     <span id="errorCodePostal"></span>
+                    <span name="error" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
@@ -110,12 +113,14 @@
                     <label for="ville">Ville <span class="font-weight-bold text-danger">*</span> : </label>
                     <input class="form-control" type="text" name="ville" id="ville" placeholder="Paris">
                     <span id="errorVille"></span>
+                    <span name="error" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="mail">E-mail <span class="font-weight-bold text-danger">*</span> : </label>
                     <input class="form-control" type="mail" name="mail" id="mail" placeholder="john.doe@gmail.com">
                     <span id="errorMail"></span>
+                    <span name="error" class="text-danger"></span>
                 </div>
             </fieldset>
 
@@ -132,6 +137,7 @@
                         <option value="autres">Autres</option>
                     </select>
                     <span id="errorSujet"></span>
+                    <span name="error" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
@@ -145,6 +151,7 @@
                 <div class="form-group">
                     <textarea class="form-control" name="question" id="question" cols="40" rows="5"></textarea>
                     <span id="errorQuestion"></span>
+                    <span name="error" class="text-danger"></span>
                 </div>
             </fieldset>
 
@@ -154,6 +161,7 @@
                     formulaire</label> <span class="font-weight-bold text-danger">*</span>
                 <br>
                 <span id="errorConsent"></span>
+                <span name="error" class="text-danger"></span>
             </div>
 
             <div class="d-flex row justify-content-between mt-3">

@@ -31,38 +31,24 @@ myForm.addEventListener('submit', function (e) {
     if (inputGenreF.checked == false && inputGenreM.checked == false) {
         errorGenre.innerHTML = "<p>Veuillez sélectionner votre genre</p>"
         errorGenre.style.color = "red";
-        delete validField[8];
+        delete validField[9];
         console.log(validField);
     } else {
         errorGenre.innerHTML = "";
-        validField[8] = "GV";
+        validField[9] = "GV";
         console.log(validField);
     }
 
-    let inputNom = document.getElementById('nom');
-    if (inputNom.value == "") {
-        errorNom.innerHTML = "<p>Ce champs doit être renseigné.</p>"
-        errorNom.style.color = "red";
-    }
-
-    let inputPrenom = document.getElementById('prenom');
-    if (inputPrenom.value == "") {
-        errorPrenom.innerHTML = "<p>Ce champs doit être renseigné.</p>"
-        errorPrenom.style.color = "red";
-    }
-
-    if (validField.includes("NFV" && "PV" && "BDV" && "CPV" && "VV" && "MV" && "SV" && "QV" && "GV" && "CV")) {
+    if (validField.length == 10) {
         document.getElementById("myForm").submit();
     }
 
-
-
 });
 
-myForm.addEventListener('reset', () => {
-    validField = [];
-    console.log(validField);
-})
+// myForm.addEventListener('reset', () => {
+//     validField = [];
+//     console.log(validField);
+// })
 
 //vérification nom
 chkInNom.addEventListener('change', () => {
@@ -239,11 +225,11 @@ chkInConsent.addEventListener('change', () => {
     if (inputConsent.checked == false) {
         errorConsent.innerHTML = "<p>Veuillez acceptez les conditions</p>"
         errorConsent.style.color = "red";
-        delete validField[9];
+        delete validField[8];
         console.log(validField);
     } else {
         errorConsent.innerHTML = "";
-        validField[9] = "CV";
+        validField[8] = "CV";
         console.log(validField);
     }
 });
