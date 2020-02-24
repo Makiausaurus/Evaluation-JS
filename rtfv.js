@@ -39,16 +39,16 @@ myForm.addEventListener('submit', function (e) {
         console.log(validField);
     }
 
-    if (validField.length == 10) {
+    if (validField.includes("NFV" && "PV" && "BDV" && "CPV" && "VV" && "MV" && "SV" && "QV" && "CV" && "GV")) {
         document.getElementById("myForm").submit();
     }
 
 });
 
-// myForm.addEventListener('reset', () => {
-//     validField = [];
-//     console.log(validField);
-// })
+myForm.addEventListener('reset', () => {
+    validField = [];
+    console.log(validField);
+})
 
 //vérification nom
 chkInNom.addEventListener('change', () => {
