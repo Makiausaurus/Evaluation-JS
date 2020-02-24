@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style_2.css">
     <title>Jarditou - Contactez-nous !</title>
 </head>
@@ -15,7 +16,8 @@
         <header>
             <div class="row">
                 <div class="col-12 col-lg-4 text-center">
-                    <img style="margin-bottom: 5px;" src="assets/img/jarditou_logo.jpg" width="300" height="90" alt="logo jarditou" title="logo jarditou" class="img-responsive">
+                    <img style="margin-bottom: 5px;" src="assets/img/jarditou_logo.jpg" width="300" height="90"
+                        alt="logo jarditou" title="logo jarditou" class="img-responsive">
                 </div>
                 <div class="col-lg-8 text-center align-self-center">
                     <h3>Tout le jardin</h3>
@@ -43,7 +45,8 @@
                 </div>
             </nav>
             <div class="row no-gutter">
-                <img style="margin-bottom: 5px;" class="col-12" src="assets/img/promotion.jpg" alt="promotion sur les lames de terrasse" title="promotion">
+                <img style="margin-bottom: 5px;" class="col-12" src="assets/img/promotion.jpg"
+                    alt="promotion sur les lames de terrasse" title="promotion">
             </div>
         </header>
         <hr>
@@ -58,20 +61,19 @@
                 <legend>Vos coordonnées</legend>
 
                 <div class="form-group">
-                    <label for="nom">Votre nom <span class="font-weight-bold text-danger">*</span> : </label> <span id="errorNom"></span>
+                    <label for="nom">Votre nom <span class="font-weight-bold text-danger">*</span> : </label>
                     <input class="form-control" type="text" name="nom" id="nom" placeholder="Loper">
+                    <span id="errorNom"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="prenom">Votre prénom <span class="font-weight-bold text-danger">*</span> : </label>
-                    <span id="errorPrenom"></span>
                     <input class="form-control" type="text" name="prenom" id="prenom" placeholder="Dave">
+                    <span id="errorPrenom"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="genre">Sexe <span class="font-weight-bold text-danger">*</span> : </label>
-                    <span id="errorGenre"></span>
-
                     <div class="btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-outline-secondary">
                             <input type="radio" name="genre" value="F" id="feminin">
@@ -82,18 +84,21 @@
                             Masculin
                         </label>
                     </div>
+                    <span id="errorGenre"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="birthDate">Date de naissance <span class="font-weight-bold text-danger">*</span> :
-                    </label> <span id="errorBirthDate"></span>
-                    <input class="form-control" type="date" name="birthDate" id="birthDate" maxlength="10" placeholder="jj/mm/aaaa">
+                    </label>
+                    <input class="form-control" type="date" name="birthDate" id="birthDate" maxlength="10"
+                        placeholder="jj/mm/aaaa">
+                    <span id="errorBirthDate"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="codePostal">Code Postal <span class="font-weight-bold text-danger">*</span> : </label>
-                    <span id="errorCodePostal"></span>
                     <input class="form-control" type="text" name="codePostal" id="codePostal" placeholder="Ex : 75000">
+                    <span id="errorCodePostal"></span>
                 </div>
 
                 <div class="form-group">
@@ -103,13 +108,14 @@
 
                 <div class="form-group">
                     <label for="ville">Ville <span class="font-weight-bold text-danger">*</span> : </label>
-                    <span id="errorVille"></span>
                     <input class="form-control" type="text" name="ville" id="ville" placeholder="Paris">
+                    <span id="errorVille"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="mail">E-mail <span class="font-weight-bold text-danger">*</span> : </label> <span id="errorMail"></span>
+                    <label for="mail">E-mail <span class="font-weight-bold text-danger">*</span> : </label>
                     <input class="form-control" type="mail" name="mail" id="mail" placeholder="dave.loper@gmail.com">
+                    <span id="errorMail"></span>
                 </div>
             </fieldset>
 
@@ -117,7 +123,7 @@
                 <legend>Votre demande</legend>
 
                 <div class="form-group">
-                    <label for="sujet">Sujet <span class="font-weight-bold text-danger">*</span> : </label> <span id="errorSujet"></span>
+                    <label for="sujet">Sujet <span class="font-weight-bold text-danger">*</span> : </label>
                     <select class="custom-select" name="sujet" id="sujet">
                         <option value="">Choisissez le sujet de votre demande</option>
                         <option value="commandes">Mes commandes</option>
@@ -125,14 +131,20 @@
                         <option value="reclamation"> Réclamation</option>
                         <option value="autres">Autres</option>
                     </select>
+                    <span id="errorSujet"></span>
                 </div>
 
-                <div class="form-group"><label for="question">Votre question <span
-                            class="font-weight-bold text-danger">*</span> : </label> <span id="errorQuestion"></span>
+                <div class="form-group">
+                    <label for="question">
+                        Votre question
+                        <span class="font-weight-bold text-danger">*</span>
+                        :
+                    </label>
                 </div>
 
                 <div class="form-group">
                     <textarea class="form-control" name="question" id="question" cols="40" rows="5"></textarea>
+                    <span id="errorQuestion"></span>
                 </div>
             </fieldset>
 
@@ -152,7 +164,8 @@
         <hr>
         <!--menu footer-->
         <footer>
-            <nav style="margin-top: 5px;" class="row no-gutter navbar navbar-expand-lg bg-dark navbar-dark text-center justify-content-center">
+            <nav style="margin-top: 5px;"
+                class="row no-gutter navbar navbar-expand-lg bg-dark navbar-dark text-center justify-content-center">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" href="#mentionlegales">Mentions légales</a>
@@ -166,7 +179,7 @@
                 </ul>
             </nav>
         </footer>
-        <script src="Exercice_7.js"></script>
+        <script src="Exercice_7_1st.js"></script>
         <!--script bootstrap-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

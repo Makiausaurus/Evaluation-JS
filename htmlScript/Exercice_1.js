@@ -1,11 +1,10 @@
-var PU;
-var QTECOM;
-var PAP;
-var PORT;
-var REM;
-var TOT;
-
 function calculPrix() {
+    let PU;
+    let QTECOM;
+    let PAP;
+    let PORT;
+    let REM;
+    let TOT;
 
     PU = parseInt(prompt("Entrez le prix du produit commandé :"));
     TOT = PU;

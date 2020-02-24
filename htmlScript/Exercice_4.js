@@ -1,9 +1,8 @@
-var inputAge = 0;
-var jeune = [];
-var moyen = [];
-var vieux = [];
-
 function repartAge() {
+    let inputAge = 0;
+    let jeune = [];
+    let moyen = [];
+    let vieux = [];
 
     while (inputAge < 100) {
         inputAge = parseInt(prompt("Entrez des âges un par un. La saisie s'arrête à la saisie d'un centenaire."))

@@ -6,7 +6,7 @@ let myForm = document.getElementById("myForm");
 let RegExCP = /^[0-9][0-9][0-9][0-9][0-9]+$/; //n'accepte qu'une valeur à 5 chiffres
 let RegExMail = /^\S+@\S+\.\S+$/; //n'autorise pas les espaces avant/après le "@" et le "."
 let RegExBirthDate = /^[0-9][0-9]?\/[0-9][0-9]?\/[0-9][0-9][0-9][0-9]?$/; // jj/mm/aaaa
-let RegExNomPrenomVille = /^[a-zA-Z-\s]+$/; //accepte lettres, tirets, espaces
+let RegExNomPrenomVille = /^[a-zA-Záàâãéèêíïóôõöúçñ-\s]+$/; //accepte lettres, tirets, espaces
 
 // début validation
 
@@ -24,8 +24,13 @@ function validInput(input, error) {
     }
 }
 
-myForm.addEventListener('change', function(e) {
+myForm.addEventListener('submit', function (e) {
     e.preventDefault();
+    if (validField.length == 10) {
+        document.forms["myForm"].submit();
+    } else {
+        validField.length = 0;
+    }
     //vérification Nom
     let inputNom = document.getElementById("nom");
     let errorNom = document.getElementById("errorNom");
@@ -138,11 +143,5 @@ myForm.addEventListener('change', function(e) {
         let errorConsent = document.getElementById("errorConsent");
         errorConsent.innerHTML = "";
         validField.push("1");
-    }
-
-    if (validField.length == 10) {
-        document.forms["myForm"].submit();
-    } else {
-        validField.length = 0;
     }
 });

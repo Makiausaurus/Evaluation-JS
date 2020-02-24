@@ -1,10 +1,8 @@
-var tab = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", "Stéphane"];
-var i;
-var input;
-var index = 0;
-
-
 function tableauVerif() {
+    let tab = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", "Stéphane"];
+    let index = 0;
+    let input;
+    let i;
     console.log("debut fonction ", index);
     index++;
     console.log(index);

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Évaluation JavaScript</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <h1 class="text-center">Évalution JavaScript</h1>
+        </header>
+
+        <div class="card bg-light mb-3">
+            <div class="card-header ">Exercice 1</div>
+            <div class="card-body">
+                <h5 class="card-title">Total d'une commande</h5>
+                <p class="card-text">A partir de la saisie du prix unitaire noté PU d'un produit et de la quantité
+                    commandée
+                    QTECOM, afficher le
+                    prix à payer PAP, en détaillant le port PORT et la remise REM, sachant que :</p>
+                <ul>
+                    <li>le port est gratuit si le prix des produits TOT est supérieur à 500 €. Dans le cas contraire, le
+                        port
+                        est de 2% de TOT</li>
+                    <li>la valeur minimale du port à payer est de 6 €</li>
+                    <li>la remise est de 5% si TOT est compris entre 100 et 200 € et de 10% au-delà</li>
+                </ul>
+                <a href="#!" class="btn btn-primary btn-block" id="ex1">Testez l'exercice 1 !</a>
+            </div>
+        </div>
+
+        <div class="card bg-light mb-3 ">
+            <div class="card-header ">Exercice 2</div>
+            <div class="card-body">
+                <h5 class="card-title">Somme des entiers inférieurs à N</h5>
+                <p class="card-text">Ecrivez un programme qui affiche la somme des nombres inférieurs à N.</p>
+                <a href="#!" class="btn btn-primary btn-block" id="ex2">Testez l'exercice 2 !</a>
+            </div>
+        </div>
+
+        <div class="card bg-light mb-3 ">
+            <div class="card-header ">Exercice 3</div>
+            <div class="card-body">
+                <h5 class="card-title">Mini et maxi</h5>
+                <p class="card-text">Modifiez le programme de la moyenne pour afficher le minimum et le maximum.
+                </p>
+                <p class="card-text text-muted">Exercice 'moyenne' : dans chapitre 07 les boucles_ : Ecrire un
+                    programme
+                    qui
+                    saisit des entiers et en affiche la
+                    somme et la moyenne (on arrête la saisie avec la valeur 0).</p>
+                <a href="#!" class="btn btn-primary btn-block" id="ex3_1">Testez la méthode sans tableau ni
+                    tri</a>
+                <a href="#!" class="btn btn-primary btn-block" id="ex3_2">Testez la méthode avec tableau et
+                    tri</a>
+            </div>
+
+        </div>
+
+        <div class="card bg-light mb-3">
+            <div class="card-header">Exercice 4</div>
+            <div class="card-body">
+                <h5 class="card-title">Calcul du nombre de jeunes, de moyens et de vieux</h5>
+                <p class="card-text">Il s'agit de dénombrer les personnes d'âge strictement inférieur à 20 ans, les
+                    personnes d'âge strictement
+                    supérieur à 40 ans et celles dont l'âge est compris entre 20 ans et 40 ans (20 ans et 40 ans y
+                    compris).
+                </p>
+                <p class="card-text">Le programme doit demander les âges successifs.</p>
+                <p class="card-text">Le comptage est arrêté dès la saisie d'un centenaire. Le centenaire est compté.</p>
+                <p class="card-text">Donnez le programme Javascript correspondant qui affiche les résultats.</p>
+                <a href="#!" class="btn btn-primary btn-block" id="ex4">Testez l'exercice 4 !</a>
+            </div>
+        </div>
+
+        <div class="card bg-light mb-3">
+            <div class="card-header">Exercice 5</div>
+            <div class="card-body">
+                <h5 class="card-title">Table de multiplication</h5>
+                <p class="card-text">Ecrivez une fonction qui affiche une table de multiplication.</p>
+                <p class="card-text">Votre fonction doit prendre un paramètre qui permet d'indiquer quelle table
+                    afficher.
+                </p>
+                <span id="sep"></span>
+                <p id="table"></p>
+                <span id="resultatAff"></span>
+                <a href="#!" class="btn btn-primary btn-block mt-3" id="ex5">Testez l'exercice 5 !</a>
+            </div>
+        </div>
+
+        <div class="card bg-light mb-3">
+            <div class="card-header">Exercice 6</div>
+            <div class="card-body">
+                <h5 class="card-title">Recherche d'un prénom</h5>
+                <p class="card-text">Un prénom est saisi au clavier. On le recherche dans un tableau "tab"</p>
+                <p class="card-text">Si le prénom est trouvé, on l'élimine du tableau en décalant les cases qui le
+                    suivent,
+                    et en mettant à
+                    blanc la dernière case.</p>
+                <a href="#!" class="btn btn-primary btn-block" id="ex6">Testez l'exercice 6 !</a>
+            </div>
+        </div>
+
+        <div class="card bg-light mb-3">
+            <div class="card-header">Exercice 7</div>
+            <div class="card-body">
+                <h5 class="card-title">Formulaire</h5>
+                <p class="card-text">Effectuez le contrôle de saisie de votre formulaire Jarditou en Javascript.</p>
+                <p class="card-text">Lorsqu'une erreur est détectée, l'utilisateur doit en être informé grâce à
+                    l'affichage
+                    d'un message sous
+                    le champ concerné.</p>
+                <p class="card-text">Le formulaire ne peut être envoyé que lorsque tout est bon.</p>
+                <a href="contact.html" class="btn btn-primary btn-block" id="ex7">Testez l'exercice 7 !</a>
+            </div>
+        </div>
+    </div>
+    <script src="Evaluation_JS.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
