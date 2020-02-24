@@ -199,7 +199,11 @@ ex5.addEventListener('click', function TableDeMultiplication() {
 
 
         table.innerHTML = ("La table de multiplication de " + x + " est :")
-        resultatAff.innerHTML += (x + " x " + i + " = " + resultat + " // ");
+        if (i == 10) {
+            resultatAff.innerHTML += (x + " x " + i + " = " + resultat);
+        } else {
+            resultatAff.innerHTML += (x + " x " + i + " = " + resultat + " // ");
+        }
     }
 })
 

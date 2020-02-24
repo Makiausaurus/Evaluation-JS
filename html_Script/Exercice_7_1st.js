@@ -5,7 +5,6 @@ let myForm = document.getElementById("myForm");
 //RegEx
 let RegExCP = /^[0-9][0-9][0-9][0-9][0-9]+$/; //n'accepte qu'une valeur à 5 chiffres
 let RegExMail = /^\S+@\S+\.\S+$/; //n'autorise pas les espaces avant/après le "@" et le "."
-let RegExBirthDate = /^[0-9][0-9]?\/[0-9][0-9]?\/[0-9][0-9][0-9][0-9]?$/; // jj/mm/aaaa
 let RegExNomPrenomVille = /^[a-zA-Záàâãéèêíïóôõöúçñ-\s]+$/; //accepte lettres, tirets, espaces
 
 // début validation
@@ -61,11 +60,6 @@ myForm.addEventListener('submit', function (e) {
     if (inputBirthDate.value == "") {
         let errorBirthDate = document.getElementById("errorBirthDate");
         errorBirthDate.innerHTML = "<p>La date de naissance doit être renseignée.</p>"
-        errorBirthDate.style.color = "red";
-    } else if (RegExBirthDate.test(inputBirthDate.value) == false) {
-        let errorBirthDate = document.getElementById("errorBirthDate");
-        errorBirthDate.innerHTML = "<p>La date de naissance doit uniquement contenir" +
-            " des chiffres, des '\/' et être au format 'jj\/mm\/aa\(aa\)'</p>"
         errorBirthDate.style.color = "red";
     } else {
         let errorBirthDate = document.getElementById("errorBirthDate");

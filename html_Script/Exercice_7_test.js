@@ -24,7 +24,7 @@ function validInput(input, error) {
     }
 }
 
-myForm.addEventListener('change', function (e) {
+myForm.addEventListener('submit', function (e) {
     e.preventDefault();
     //vérification Nom
     let inputNom = document.getElementById("nom");
