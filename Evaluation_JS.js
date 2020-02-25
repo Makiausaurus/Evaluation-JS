@@ -83,13 +83,12 @@ ex3_1.addEventListener('click', function moyMinMax1() {
     let entier;
     let valMax = Number.MIN_SAFE_INTEGER;
     let valMin = Number.MAX_SAFE_INTEGER;
-    entier = parseInt(prompt("Saisir un nombre entier (0 pour arrêter la saisie)"));
-    valMin = entier
 
-    while (entier != 0) {
+    do {
+        entier = parseInt(prompt("Saisir un nombre entier (0 pour arrêter la saisie)"));
+        valMin = entier
         total += entier;
         compteur++;
-        entier = parseInt(prompt("Saisir un nombre entier (0 pour arrêter la saisie)"));
         if (entier > valMax) {
             valMax = entier;
             console.log(valMax);
@@ -97,12 +96,12 @@ ex3_1.addEventListener('click', function moyMinMax1() {
             valMin = entier;
             console.log(valMin);
         }
-    } // fin while
+    } while (entier != 0)
 
     // sortie de boucle puis calcul
-    moyenne = total / (compteur);
-    console.log(total, (compteur));
-    alert("Moyenne : " + total + "/" + (compteur) + " =~ " + moyenne.toFixed(2) +
+    moyenne = total / compteur;
+    console.log(total, compteur);
+    alert("Moyenne : " + total + "/" + compteur + " =~ " + moyenne.toFixed(2) +
         "\nLa valeur minimale entrée était : " + valMin + " et la valeur maximale" +
         " était : " + valMax);
     console.log(valMin);
@@ -122,6 +121,15 @@ ex3_2.addEventListener('click', function moyMinMax2() {
                 }
             }
         }
+        // for (i = 0; i < tabNoTri.length; i++) {
+        //     for (j = 0; j < tabNoTri.length; j++) {
+        //         if (tabNoTri[i] > tabNoTri[j]) {
+        //             let temp = tabNoTri[j];
+        //             tabNoTri[j] = tabNoTri[i];
+        //             tabNoTri[i] = temp;
+        //         }
+        //     }
+        // }
         console.log("Trié : " + tabNoTri)
     }
 
@@ -129,17 +137,14 @@ ex3_2.addEventListener('click', function moyMinMax2() {
     let i = 0;
     let tot = 0;
 
-    tabVal[i] = parseInt(prompt("Entrez une valeur (0 pour arrêter la saisie) :"));
-    tot += tabVal[i];
-    i++
-    console.log(i);
-    while (tabVal[i - 1] != 0) {
+    do {
         tabVal[i] = parseInt(prompt("Entrez une valeur (0 pour arrêter la saisie) :"));
         tot += tabVal[i];
         i++;
         console.log(i);
         console.log(tabVal);
     }
+    while (tabVal[i - 1] != 0)
     tabVal.pop();
     console.log(tabVal);
 
@@ -198,11 +203,11 @@ ex5.addEventListener('click', function TableDeMultiplication() {
         resultat = x * i;
 
 
-        table.innerHTML = ("La table de multiplication de " + x + " est :")
+        table.innerHTML = "La table de multiplication de " + x + " est :"
         if (i == 10) {
-            resultatAff.innerHTML += (x + " x " + i + " = " + resultat);
+            resultatAff.innerHTML += x + " x " + i + " = " + resultat;
         } else {
-            resultatAff.innerHTML += (x + " x " + i + " = " + resultat + " // ");
+            resultatAff.innerHTML += x + " x " + i + " = " + resultat + " <br> ";
         }
     }
 })

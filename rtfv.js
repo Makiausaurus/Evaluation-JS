@@ -20,7 +20,7 @@ chkInQuestion = document.getElementById("question");
 chkInConsent = document.getElementById("consent");
 
 //a l'envoi
-myForm.addEventListener('submit', function (e) {
+myForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
     //vérification genre
@@ -39,7 +39,7 @@ myForm.addEventListener('submit', function (e) {
         console.log(validField);
     }
 
-    if (validField.includes("NFV" && "PV" && "BDV" && "CPV" && "VV" && "MV" && "SV" && "QV" && "CV" && "GV")) {
+    if (validField.includes("NFV" && "PV" && "BDV" && "CPV" && "VV" && "MV" && "SV" && "QV" && "CV" && "GV")) { // à changer en booléen
         document.getElementById("myForm").submit();
     }
 
@@ -186,7 +186,7 @@ chkInMail.addEventListener('change', () => {
 chkInSujet.addEventListener('change', () => {
     let inputSujet = document.getElementById('sujet')
     let errorSujet = document.getElementById('errorSujet')
-
+    console.log(inputSujet.value);
     if (inputSujet.value == "") {
         errorSujet.innerHTML = "<p>Veuillez sélectionner une sujet</p>"
         errorSujet.style.color = "red";
