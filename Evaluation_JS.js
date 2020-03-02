@@ -22,7 +22,7 @@ ex1.addEventListener('click', function calculPrix() {
     TOT *= QTECOM;
     console.log(TOT)
 
-    if (TOT >= 100 && TOT <= 200) { // si total entre 100 et 199 -> 5%
+    if (TOT >= 100 && TOT < 200) { // si total entre 100 et 199 -> 5%
         REM = 5 / 100;
         console.log(REM);
     } else if (TOT > 200) { //sinon si 200 ou plus -> 10%
@@ -214,7 +214,6 @@ ex5.addEventListener('click', function TableDeMultiplication() {
 
 ex6.addEventListener('click', function tableauVerif() {
     let tab = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", "Stéphane"];
-    let index = 0;
     let input;
     input = prompt("Saisissez un prénom listé ci-dessous :" + "\n" + tab);
 

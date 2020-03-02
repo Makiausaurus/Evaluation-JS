@@ -20,7 +20,7 @@ chkInQuestion = document.getElementById("question");
 chkInConsent = document.getElementById("consent");
 
 //a l'envoi
-myForm.addEventListener('submit', function(e) {
+myForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     //vérification genre
@@ -31,15 +31,33 @@ myForm.addEventListener('submit', function(e) {
     if (inputGenreF.checked == false && inputGenreM.checked == false) {
         errorGenre.innerHTML = "<p>Veuillez sélectionner votre genre</p>"
         errorGenre.style.color = "red";
-        delete validField[9];
+        validField[9] = false;
         console.log(validField);
     } else {
         errorGenre.innerHTML = "";
-        validField[9] = "GV";
+        validField[9] = true;
         console.log(validField);
     }
 
-    if (validField.includes("NFV" && "PV" && "BDV" && "CPV" && "VV" && "MV" && "SV" && "QV" && "CV" && "GV")) { // à changer en booléen
+
+    let inputSujet = document.getElementById('sujet')
+    let errorSujet = document.getElementById('errorSujet')
+    console.log(inputSujet.value);
+    if (inputSujet.value == "") {
+        errorSujet.innerHTML = "<p>Veuillez sélectionner une sujet</p>"
+        errorSujet.style.color = "red";
+        validField[6] = false;
+        console.log(validField);
+    } else {
+        errorSujet.innerHTML = "";
+        validField[6] = true;
+        console.log(validField);
+    }
+
+
+    if (validField.includes(false)) { // à changer en booléen
+        e.preventDefault();
+    } else {
         document.getElementById("myForm").submit();
     }
 
@@ -58,17 +76,17 @@ chkInNom.addEventListener('change', () => {
     if (inputNom.value == "") {
         errorNom.innerHTML = "<p>Ce champs doit être renseigné.</p>"
         errorNom.style.color = "red";
-        delete validField[0];
+        validField[0] = false;
         console.log(validField);
     } else if (RegExNomPrenomVille.test(inputNom.value) == false) {
         errorNom.innerHTML = "<p>Ce champs doit uniquement comporter des lettres, " +
             " des tirets et des espaces.</p>"
         errorNom.style.color = "red";
-        delete validField[0];
+        validField[0] = false;
         console.log(validField);
     } else {
         errorNom.innerHTML = "";
-        validField[0] = "NFV";
+        validField[0] = true;
         console.log(validField);
     }
 });
@@ -81,34 +99,34 @@ chkInPrenom.addEventListener('change', () => {
     if (inputPrenom.value == "") {
         errorPrenom.innerHTML = "<p>Ce champs doit être renseigné.</p>"
         errorPrenom.style.color = "red";
-        delete validField[1];
+        validField[1] = false;
         console.log(validField);
     } else if (RegExNomPrenomVille.test(inputPrenom.value) == false) {
         errorPrenom.innerHTML = "<p>Ce champs doit uniquement comporter des lettres, " +
             " des tirets et des espaces.</p>"
         errorPrenom.style.color = "red";
-        delete validField[1];
+        validField[1] = false;
         console.log(validField);
     } else {
         errorPrenom.innerHTML = "";
-        validField[1] = "PV";
+        validField[1] = true;
         console.log(validField);
     }
 });
 
 //vérification date de naissance
-chkInBD.addEventListener('blur', () => {
+chkInBD.addEventListener('change', () => {
     let inputBirthDate = document.getElementById('birthDate')
     let errorBirthDate = document.getElementById('errorBirthDate')
     console.log(inputBirthDate.value);
     if (inputBirthDate.value == "") {
         errorBirthDate.innerHTML = "<p>Ce champs doit être renseigné.</p>"
         errorBirthDate.style.color = "red";
-        delete validField[2];
+        validField[2] = false;
         console.log(validField)
     } else {
         errorBirthDate.innerHTML = "";
-        validField[2] = "BDV";
+        validField[2] = true;
         console.log(validField);
     }
 });
@@ -121,17 +139,17 @@ chkInCP.addEventListener('change', () => {
     if (inputCodePostal.value == "") {
         errorCodePostal.innerHTML = "<p>Ce champs doit être renseigné.</p>"
         errorCodePostal.style.color = "red";
-        delete validField[3];
+        validField[3] = false;
         console.log(validField);
     } else if (RegExCP.test(inputCodePostal.value) == false) {
         errorCodePostal.innerHTML = "<p>Le Code Postal doit obligatoirement être " +
             "composé de 5 chiffres</p>"
         errorCodePostal.style.color = "red";
-        delete validField[3];
+        validField[3] = false;
         console.log(validField);
     } else {
         errorCodePostal.innerHTML = "";
-        validField[3] = "CPV";
+        validField[3] = true;
         console.log(validField);
     }
 });
@@ -144,17 +162,17 @@ chkInVille.addEventListener('change', () => {
     if (inputVille.value == "") {
         errorVille.innerHTML = "<p>Ce champs doit être renseigné.</p>"
         errorVille.style.color = "red";
-        delete validField[4];
+        validField[4] = false;
         console.log(validField);
     } else if (RegExNomPrenomVille.test(inputVille.value) == false) {
         errorVille.innerHTML = "<p>Ce champs doit uniquement comporter des lettres, " +
             " des tirets et des espaces.</p>"
         errorVille.style.color = "red";
-        delete validField[4];
+        validField[4] = false;
         console.log(validField);
     } else {
         errorVille.innerHTML = "";
-        validField[4] = "VV";
+        validField[4] = true;
         console.log(validField);
     }
 });
@@ -167,17 +185,17 @@ chkInMail.addEventListener('change', () => {
     if (inputMail.value == "") {
         errorMail.innerHTML = "<p>Ce champs doit être renseigné.</p>"
         errorMail.style.color = "red";
-        delete validField[5];
+        validField[5] = false;
         console.log(validField);
     } else if (RegExMail.test(inputMail.value) == false) {
         errorMail.innerHTML = "<p>L'adresse e-mail doit obligatoirement contenir" +
             " un '@' et être au format 'xxx@yy.zz'</p>"
         errorMail.style.color = "red";
-        delete validField[5];
+        validField[5] = false;
         console.log(validField);
     } else {
         errorMail.innerHTML = "";
-        validField[5] = "MV";
+        validField[5] = true;
         console.log(validField);
     }
 });
@@ -190,11 +208,11 @@ chkInSujet.addEventListener('change', () => {
     if (inputSujet.value == "") {
         errorSujet.innerHTML = "<p>Veuillez sélectionner une sujet</p>"
         errorSujet.style.color = "red";
-        delete validField[6];
+        validField[6] = false;
         console.log(validField);
     } else {
         errorSujet.innerHTML = "";
-        validField[6] = "SV";
+        validField[6] = true;
         console.log(validField);
     }
 });
@@ -207,11 +225,11 @@ chkInQuestion.addEventListener('change', () => {
     if (inputQuestion.value == "") {
         errorQuestion.innerHTML = "<p>Veuillez posez votre question</p>"
         errorQuestion.style.color = "red";
-        delete validField[7];
+        validField[7] = false;
         console.log(validField);
     } else {
         errorQuestion.innerHTML = "";
-        validField[7] = "QV";
+        validField[7] = true;
         console.log(validField);
     }
 });
@@ -225,11 +243,11 @@ chkInConsent.addEventListener('change', () => {
     if (inputConsent.checked == false) {
         errorConsent.innerHTML = "<p>Veuillez acceptez les conditions</p>"
         errorConsent.style.color = "red";
-        delete validField[8];
+        validField[8] = false;
         console.log(validField);
     } else {
         errorConsent.innerHTML = "";
-        validField[8] = "CV";
+        validField[8] = true;
         console.log(validField);
     }
 });
