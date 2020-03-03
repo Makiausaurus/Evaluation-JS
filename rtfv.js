@@ -3,7 +3,7 @@ let validField = [];
 let myForm = document.getElementById("myForm");
 
 //RegEx
-let RegExCP = /^[0-9][0-9][0-9][0-9][0-9]+$/; //n'accepte qu'une valeur à 5 chiffres
+let RegExCP = /^[\d]{5}$/; //n'accepte qu'une valeur à 5 chiffres
 let RegExMail = /^\S+@\S+\.\S+$/; //n'autorise pas les espaces avant/après le "@" et le "."
 let RegExNomPrenomVille = /^[a-zA-Záàâãéèêíïóôõöúçñ-\s]+$/; //accepte lettres, tirets, espaces
 
